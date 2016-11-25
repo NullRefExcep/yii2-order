@@ -1,5 +1,4 @@
-# yii2-order
-Module for orders management for Yii2
+# Orders management module for Yii2
 
 
 Installation
