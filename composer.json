@@ -1,0 +1,19 @@
+{
+    "name": "nullref/yii2-order",
+    "description": "Module for orders management",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.0",
+        "nullref/yii2-core": "*",
+        "nullref/yii2-useful": "^0.0.3",
+        "pheme/yii2-settings": "^0.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "nullref\\order\\": "src/"
+        }
+    }
+}
