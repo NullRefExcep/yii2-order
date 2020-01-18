@@ -88,7 +88,7 @@ JS
                 'id' => 'offerSearchForm',
                 'action' => ['offer-search', 'order_id' => $orderId],
             ]) ?>
-            <?= $form->field($searchModel, 'title')
+            <?= $form->field($searchModel, 'name')
                 ->widget(Select2::className(), [
                     'data' => Product::getTitleMap(),
                     'attribute' => 'title',
@@ -101,7 +101,7 @@ JS
                     ],
                 ])
             ?>
-            <?= $form->field($searchModel, 'productSku')
+            <?= $form->field($searchModel, 'sku')
                 ->widget(Select2::className(), [
                     'data' => Product::getSkuMap(),
                     'attribute' => 'productSku',

@@ -14,14 +14,17 @@ class m160427_085905_improve_order_table extends Migration
         $this->addColumn('{{%order}}', 'address', $this->string());
         $this->addColumn('{{%order}}', 'description', $this->string());
         $this->addColumn('{{%order}}', 'status_id', $this->integer());
+        $this->addColumn('{{%order}}', 'delivery_id', $this->integer());
+        $this->addColumn('{{%order}}', 'type_id', $this->integer());
+        $this->addColumn('{{%order}}', 'payment_id', $this->integer());
         $this->addColumn('{{%order}}', 'user_id', $this->integer());
+        $this->addColumn('{{%order}}', 'call_time', $this->string());
         $this->addColumn('{{%order}}', 'price', $this->decimal(10, 2)->notNull());
 
         $this->addColumn('{{%order_item}}', 'amount', $this->integer()->defaultValue(0));
         $this->addColumn('{{%order_item}}', 'offer_id', $this->integer()->notNull());
         $this->addColumn('{{%order_item}}', 'price', $this->decimal(10, 2)->notNull());
         $this->createIndex('offer_id', '{{%order_item}}', 'offer_id');
-        $this->addForeignKey('offer_fk', '{{%order_item}}', 'offer_id', '{{%product_variant}}', 'id', 'RESTRICT', 'RESTRICT');
 
         $this->createTable('{{%order_status}}', [
             'id' => $this->primaryKey(),
@@ -40,7 +43,6 @@ class m160427_085905_improve_order_table extends Migration
         $this->dropTable('{{%order_status}}');
 
 
-        $this->dropForeignKey('offer_fk', '{{%order_item}}');
         $this->dropIndex('offer_id', '{{%order_item}}');
 
         $this->dropColumn('{{%order_item}}', 'amount');
@@ -51,8 +53,12 @@ class m160427_085905_improve_order_table extends Migration
         $this->dropColumn('{{%order}}', 'email');
         $this->dropColumn('{{%order}}', 'address');
         $this->dropColumn('{{%order}}', 'description');
+        $this->dropColumn('{{%order}}', 'payment_id');
+        $this->dropColumn('{{%order}}', 'type_id');
+        $this->dropColumn('{{%order}}', 'delivery_id');
         $this->dropColumn('{{%order}}', 'status_id');
         $this->dropColumn('{{%order}}', 'user_id');
+        $this->dropColumn('{{%order}}', 'call_time');
         $this->dropColumn('{{%order}}', 'price');
     }
 }

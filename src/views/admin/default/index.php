@@ -4,7 +4,7 @@ use nullref\order\models\OrderItem;
 use nullref\order\models\OrderStatus;
 use nullref\order\models\OrderType;
 use app\modules\user\models\User;
-use app\widgets\ActiveRangeInputGroup;
+use nullref\core\widgets\ActiveRangeInputGroup;
 use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'user_id',
                 'filter' => Select2::widget([
-                    'data' => array_merge([0 => Yii::t('user', 'Guest')], User::getMap('fullName', 'id', [], false)),
+                    'data' => array_merge([0 => Yii::t('user', 'Guest')], User::getMap('name', 'id', [], false)),
                     'options' => ['placeholder' => Yii::t('user', 'User')],
                     'attribute' => 'user_id',
                     'model' => $searchModel,

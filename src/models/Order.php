@@ -5,7 +5,7 @@ namespace nullref\order\models;
 use app\components\pricing\ClientRate;
 use app\components\pricing\ExtraRateInterface;
 use app\components\pricing\GuestRate;
-use app\components\SessionModel;
+use nullref\useful\traits\SessionModel;
 use nullref\order\behaviors\PriceCalculator;
 use nullref\order\behaviors\StockOrderBehavior;
 use nullref\order\events\OrderItemEvent;

@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'telephone')->textInput(['maxlength' => true]) ?>
 
             <?= $form->field($model, 'user_id')->widget(Select2::className(), [
-                'data' => User::getMap('fullName', 'id', [], false),
+                'data' => User::getMap('name', 'id', [], false),
                 'options' => ['placeholder' => Yii::t('user', 'User')],
 
             ]) ?>

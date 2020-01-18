@@ -12,11 +12,11 @@ use nullref\order\interfaces\Offer;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Model;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\data\DataProviderInterface;
 use yii\db\ActiveQuery;
 
-class OfferManager extends Object
+class OfferManager extends BaseObject
 {
     /** @var string */
     public $offerSearch = null;
