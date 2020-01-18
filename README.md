@@ -1,6 +1,8 @@
 # Orders management module for Yii2
 (WIP)
 
+[![Latest Stable Version](https://poser.pugx.org/nullref/yii2-order/v/stable)](https://packagist.org/packages/nullref/yii2-order) [![Total Downloads](https://poser.pugx.org/nullref/yii2-order/downloads)](https://packagist.org/packages/nullref/yii2-order) [![Latest Unstable Version](https://poser.pugx.org/nullref/yii2-order/v/unstable)](https://packagist.org/packages/nullref/yii2-order) [![License](https://poser.pugx.org/nullref/yii2-order/license)](https://packagist.org/packages/nullref/yii2-order)
+
 Installation
 ------------
 
