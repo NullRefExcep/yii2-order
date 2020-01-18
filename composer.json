@@ -5,10 +5,10 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0||>=7.0",
         "yiisoft/yii2": ">=2.0.0",
-        "nullref/yii2-core": "*",
-        "nullref/yii2-useful": "^0.0.3",
+        "nullref/yii2-useful": ">=0.0.4",
+        "nullref/yii2-core": ">=0.0.4"
         "pheme/yii2-settings": "^0.4.0"
     },
     "autoload": {
